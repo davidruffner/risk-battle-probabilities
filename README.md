@@ -1,6 +1,13 @@
 # risk-battle-probabilities
 Scripts to calculate the odds of battles in the Game of Risk.
 
+## Usage
+```bash
+python risk.py
+python risk2v2.py
+python risk3v1.py
+```
+
 ## Calculation of risk battle odds.
 
 ### General case
