@@ -20,23 +20,28 @@ for i in posvals:
     for j in posvals:
         for k in posvals:
                 for m in posvals:
-                    "going through all possible vals of dice"
+                    #  going through all possible vals of dice
                     odice = [i,j,k]
                     odice.sort()
                     odice.reverse()
-                    #print odice
+
                     ddice = [m]
-                    "determining who will win"
-                    "Compare high die"
+                    #  determining who will win
+                    #  Compare high die
                     if odice[0] > ddice[0]:
                         poneoff = poneoff+1
                     else:
                         ponedef = ponedef+1
-                    print i
-print "poneoff"
+
+print ''
+print """Calculation of risk battle odds. The case where offense has three
+armies and the defense only has one. The defense is at a significant
+disadvantage:"""
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "Probability of defense losing one army:"
 print poneoff/pow(6.,4)
 
-print "ponedef"
+print "Probability of offense losing one army:"
 print ponedef/pow(6.,4)
 
 """

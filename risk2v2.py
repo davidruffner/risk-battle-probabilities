@@ -16,12 +16,12 @@ posvals = range(1,nsides+1)
 
 ptwooff = 0
 ptwodef = 0
-psplits = 0 
+psplits = 0
 for i in posvals:
     for j in posvals:
         for l in posvals:
                 for m in posvals:
-                    "going through all possible vals of dice"
+                    # going through all possible vals of dice"
                     odice = [i,j]
                     odice.sort()
                     odice.reverse()
@@ -29,8 +29,8 @@ for i in posvals:
                     ddice = [l,m]
                     ddice.sort()
                     ddice.reverse()
-                    "determining who will win"
-                    "Compare high die"
+                    # determining who will win"
+                    # Compare high die"
                     if odice[0] > ddice[0]:
                         ohigh = 1
                     else:
@@ -45,17 +45,17 @@ for i in posvals:
                         ptwodef = ptwodef+1
                     else:
                         psplits = psplits+1
-                    print i
-print "ptwooff"
+
+print ''
+print """Calculation of risk battle odds. The case where offense and
+defense only have two armies. The offensive probabilities go way down
+compared to the general case:"""
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "Probability of defense losing two armies:"
 print ptwooff/pow(6.,4)
 
-print "ptwodef"
+print "Probability of offense losing two armies:"
 print ptwodef/pow(6.,4)
 
-print "psplits"
+print "Probability of both losing a single army:"
 print psplits/pow(6.,4)
-
-"However, when it is two vs. two the offensive probabilities go way down
-now its ptwooff=.23
-        psplits=.32
-        ptwodef=.45"
